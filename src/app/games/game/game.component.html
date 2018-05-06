@@ -16,15 +16,15 @@
       <div class="container">
         <img *ngIf="game.image_url" mat-card-image [src]="game.image_url" alt="game">
         <mat-form-field class="input">
-          <input [(ngModel)]="game.title" matInput placeholder="Title" required>
+          <input [(ngModel)]="game.title" matInput placeholder="Name" required>
         </mat-form-field>
 
         <mat-form-field class="input">
-          <input [(ngModel)]="game.genre" matInput placeholder="Genre" required>
+          <input [(ngModel)]="game.genre" matInput placeholder="Category" required>
         </mat-form-field>
 
         <mat-form-field class="input">
-          <input [(ngModel)]="game.author" matInput placeholder="Author" required>
+          <input [(ngModel)]="game.author" matInput placeholder="Publisher" required>
         </mat-form-field>
 
         <mat-form-field class="input">
