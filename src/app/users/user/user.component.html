@@ -20,8 +20,13 @@
         </mat-form-field>
 
         <mat-form-field class="input">
-          <input [(ngModel)]="user.email" matInput placeholder="Email" required>
+          <input [(ngModel)]="user.Email" matInput placeholder="Email" required>
         </mat-form-field>
+
+        <mat-form-field class="input">
+          <input [(ngModel)]="user.password" matInput placeholder="Password" required>
+        </mat-form-field>
+
 
         <mat-form-field class="input">
           <input [(ngModel)]="user.image_url" matInput placeholder="Cover Image URL" required>

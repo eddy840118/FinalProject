@@ -14,16 +14,17 @@
     <mat-card class="grow" *ngFor="let game of games; let i = index">
       <mat-toolbar color="warn" class="toolbar">
         <mat-toolbar-row>
-          <mat-card-title>{{game.title}}</mat-card-title>
+          <mat-card-title>{{game.name}}</mat-card-title>
           <mat-card-subtitle></mat-card-subtitle>
         </mat-toolbar-row>
       </mat-toolbar>
       <img class="list-cover-image" mat-card-image [src]="game.image_url" alt="game">
       <mat-card-content>
         <p>ID: {{game.id}}</p>
-        <P>Author: {{game.author}}</P>
-        <P>Genre: {{game.genre}}</P>
-        <P>Read: {{game.read}}</P>
+        <P>Platform: {{game.platform}}</P>
+        <P>Publisher: {{game.publisher}}</P>
+        <P>Category: {{game.category}}</P>
+        
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button (click)="deleteGame(game.id)" color="warn">
