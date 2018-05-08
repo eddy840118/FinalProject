@@ -28,8 +28,8 @@ export class GameComponent implements OnInit {
 
   updateGame(game: any) {
     // console.log('game', game);
-    const gameID = game.id;
-    delete game.id;
+    const gameID = game._id;
+    delete game._id;
     this.gameService.updateGame(gameID, game).then((resp) => {
       // console.log('resp', resp);
       if (resp) {
