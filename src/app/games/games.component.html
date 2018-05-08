@@ -20,7 +20,7 @@
       </mat-toolbar>
       <img class="list-cover-image" mat-card-image [src]="game.image_url" alt="game">
       <mat-card-content>
-        <p>ID: {{game.id}}</p>
+        <p>ID: {{game._id}}</p>
         <P>Platform: {{game.platform}}</P>
         <P>Publisher: {{game.publisher}}</P>
         <P>Category: {{game.category}}</P>
@@ -31,7 +31,7 @@
           Delete
           <mat-icon class="example-icon">clear</mat-icon>
         </button>
-        <button mat-raised-button color="accent" [routerLink]="['/game',game.id]">
+        <button mat-raised-button color="accent" [routerLink]="['/game',game._id]">
           Edit
           <mat-icon class="example-icon">edit</mat-icon>
         </button>

@@ -14,22 +14,22 @@
     <mat-card class="grow" *ngFor="let user of users; let i = index">
       <mat-toolbar color="warn" class="toolbar">
         <mat-toolbar-row>
-          <mat-card-title>{{user.title}}</mat-card-title>
+          <mat-card-title>{{user.username}}</mat-card-title>
           <mat-card-subtitle></mat-card-subtitle>
         </mat-toolbar-row>
       </mat-toolbar>
       <img class="list-cover-image" mat-card-image [src]="user.image_url" alt="user">
       <mat-card-content>
-        <p>ID: {{user.id}}</p>
-        <P>username: {{user.username}}</P>
+        <P>ID: {{user._id}}</P>
         <P>Email: {{user.Email}}</P>
+        <P>password: {{user.password}}</P>
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button (click)="deleteUser(user._id)" color="warn">
           Delete
           <mat-icon class="example-icon">clear</mat-icon>
         </button>
-        <button mat-raised-button color="accent" [routerLink]="['/user',user.id]">
+        <button mat-raised-button color="accent" [routerLink]="['/user',user._id]">
           Edit
           <mat-icon class="example-icon">edit</mat-icon>
         </button>
