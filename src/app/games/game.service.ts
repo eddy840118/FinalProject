@@ -16,7 +16,7 @@ export class GameService {
     }
 
     getGames(): Promise<Array<Object>> {
-        return this.http.get(`${this.apiUrl}/game`)
+        return this.http.get(`${this.apiUrl}games`)
             .toPromise()
             .then((resp) => {
                 let games = resp.json();
@@ -26,7 +26,7 @@ export class GameService {
     }
 
     getGameById(gameId): Promise<Object> {
-        return this.http.get(`${this.apiUrl}/game/id/${gameId}`)
+        return this.http.get(`${this.apiUrl}games/id/${gameId}`)
             .toPromise()
             .then((resp) => {
                 let game = resp.json();
@@ -36,7 +36,7 @@ export class GameService {
     }
 
     addGame(game): Promise<Object> {
-        return this.http.post(`${this.apiUrl}/game`, game)
+        return this.http.post(`${this.apiUrl}games`, game)
             .toPromise()
             .then((resp) => {
                 let game = resp.json();
@@ -47,7 +47,7 @@ export class GameService {
 
     deleteGame(id): Promise<Object> {
         // console.log(`from game.service delete method......`);
-        return this.http.delete(`${this.apiUrl}/game/id/${id}`)
+        return this.http.delete(`${this.apiUrl}games/id/${id}`)
             .toPromise()
             .then((resp) => {
                 let status = resp.json();
@@ -57,7 +57,7 @@ export class GameService {
     }
 
     updateGame(id, game): Promise<Object> {
-        return this.http.put(`${this.apiUrl}/game/id/${id}`, game)
+        return this.http.put(`${this.apiUrl}games/id/${id}`, game)
             .toPromise()
             .then((resp) => {
                 let game = resp.json();
